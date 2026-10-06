@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>FitLife Gym</title>
+  <style>
+    body { font-family: sans-serif; max-width: 400px; margin: 30px auto; padding: 20px; background: #f4f4f4; }
+    h1 { color: #333; text-align: center; }
+    form { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    input, select, button { width: 100%; padding: 10px; margin: 8px 0 16px; box-sizing: border-box; }
+    button { background: #28a745; color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <h1>FitLife Gym</h1>
+  <p style="text-align: center;">Faça sua pré-matrícula abaixo:</p>
+
+  <!-- Cole seu endpoint do Formspree no action -->
+  <form action="https://formspree.io/f/SUA_CHAVE_AQUI" method="POST">
+    
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="Nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="E-mail" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="Telefone" required>
+
+    <label for="plano">Plano:</label>
+    <select id="plano" name="Plano" required>
+      <option value="Start">Plano Start - R$ 89,90</option>
+      <option value="VIP">Plano VIP - R$ 129,90</option>
+    </select>
+
+    <button type="submit">Enviar Matrícula</button>
+  </form>
+
+</body>
+</html>
